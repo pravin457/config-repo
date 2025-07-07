@@ -3,7 +3,10 @@ global:
 logging:
   level:
     root: INFO # Corrected spacing for 'INFO'
-
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6005/eureka/ # Ensure no space between colon and http
 management:
   endpoints: # This is the main 'endpoints' block
     web:
