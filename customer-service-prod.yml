@@ -1,10 +1,11 @@
 global:
-  message: welcome to customer prod environment!!
+  message: welcome to customer prod environment!! # Use this one, or the other, or combine them
+  # If 'hello from prod' is a different message, give it a different key
+  # app-info: hello from prod
 server:
   port: 6001
-message: hello from prod
-spring:
-   datasource:
+spring: # This 'spring' key should be at the same level as 'server' and 'global'
+  datasource:
     url: jdbc:mysql://localhost:3306/cust_prod?createDatabaseIfNotExist=true
     username: root
     password: root
