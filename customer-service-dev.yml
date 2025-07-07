@@ -1,10 +1,11 @@
 global:
-  message: welcome to customer dev environment!!
+  message: welcome to customer dev environment!! # Use this one, or the other, or combine them
+  # If 'hello from dev' is a different message, give it a different key
+  # app-info: hello from dev
 server:
   port: 6000
-message: hello from dev
-spring:
-   datasource:
+spring: # This 'spring' key should be at the same level as 'server' and 'global'
+  datasource:
     url: jdbc:mysql://localhost:3306/cust_dev?createDatabaseIfNotExist=true
     username: root
     password: root
