@@ -2,12 +2,13 @@ global:
   message: welcome to global microservices environment!!
 logging:
   level:
-    root:INFO
+    root: INFO # Corrected spacing for 'INFO'
+
 management:
-  endpoints:
+  endpoints: # This is the main 'endpoints' block
     web:
-     exposure:
-       include:health,info,refresh
-  endpoints:
+      exposure:
+        include: health,info,refresh # Use comma-separated list without spaces after comma is fine, but space is better for readability
+  endpoint: # Use 'endpoint' (singular) to configure individual endpoints
     health:
-     show-details:always
+      show-details: always
